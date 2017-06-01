@@ -28,3 +28,10 @@ cache:
   directories:
   - "$HOME/.atomist"
   - "$HOME/.cache/yarn"
+deploy:
+  provider: releases
+  api_key:
+    secure: uqc5+FLLPfhqqWs1NlxAmwLEQ4Z1/JWG4H5LB/aJBO9pu0OqcovbjgkVyXEVDqO/NroE0TYGPXgc/RY9xLh+tQv42MtErJLYhdLId5F+0qk8xmPEIsCn6iTxBDwlbE4T1oMTi7OaHmy46Ow/b0iZgtWeKvKUZlyDZzu47xfg+tEeVINlClpqj1Zy+1ZhTiU9DEhNmj8gad/IdBu7mO1E043ly8P7tcUryHDgPuYKlFYZipEQfYfGrXqsrOmWEemJ1el0QcWv0yUtprzLBXjW1cB7CDMoQybUTDMS2t/R8Pz2kxWVzslFTdFf+cltPFald3SNnVs0jSq3RLxp06bhjTKyQWcUoVZmIhL1Fz3uFNpx6pqymHyXp4TR+G0ogUC4s1AN3XewgkeymhK4uLqPzytQxAo16xFTjfbViygNi/mCrro35IOZVVDzUDVI16CQFodg53dEKAgWqiMnB6vFK/GoqQW+fCobSagD1GmZaVJqcXzhEFNOvmEt8s51BXFOlzFZs4/S7e13u3ESg3acu2nVKEv2/3OuBR3uhgwkQQPmeh0FzT5x1620rs1h4B8hCfVBahvBRnsj5dFeDoPezygGJ6V8gX0w7GiumU4Mi7dMv9dsFNXQgbEL3v2ZBCdwzRp/G6F+GyX3TX96z0vZh/VGuv0ala67sJbftttj57U=
+  on:
+    tags: true
+    condition: "$TRAVIS_TAG =~ ^[0-9]+\\.[0-9]+\\.[0-9]+$"
