@@ -67,6 +67,8 @@ function renderResults(result: any, query: string): ResponseMessage {
 
     // mark the last item for rendering purpose by mustache
     result.items[result.items.length - 1].last = true;
+    const thumbUrl = "https://slack-imgs.com/?c=1&o1=wi75.he75&url=https%3A%2F%2Fcdn.sstatic.net" +
+        "%2FSites%2Fstackoverflow%2Fimg%2Fapple-touch-icon%402.png%3Fv%3D73d79a89bded";
 
     return new ResponseMessage(mustache.render(`{
   "attachments": [
@@ -78,7 +80,7 @@ function renderResults(result: any, query: string): ResponseMessage {
       "author_icon": "{{{owner.profile_image}}}",
       "title": "{{{title}}}",
       "title_link": "{{{link}}}",
-      "thumb_url": "https://slack-imgs.com/?c=1&o1=wi75.he75&url=https%3A%2F%2Fcdn.sstatic.net%2FSites%2Fstackoverflow%2Fimg%2Fapple-touch-icon%402.png%3Fv%3D73d79a89bded",
+      "thumb_url": "${thumbUrl}",
       "footer": "{{#tags}}{{.}}  {{/tags}}",
       "ts": {{{last_activity_date}}}
     }{{^last}},{{/last}}

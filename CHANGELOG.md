@@ -9,8 +9,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 [Unreleased]: https://github.com/atomist/doc-rugs/compare/0.1.0...HEAD
 
-## [0.1.0] - 2017-04-27
+## [0.1.0] - 2017-06-01
 
 [0.1.0]: https://github.com/atomist/doc-rugs/tree/0.1.0
 
-Initial release
+Initial release, content migrated from [atomist/end-user-documentation][doc]
+
+[doc]: https://github.com/atomist/end-user-documentation
