@@ -1,0 +1,26 @@
+---
+kind: "operation"
+client: "rug-cli 1.0.0-m.1"
+editor:
+  name: "UpdateSupportFiles"
+  group: "atomist"
+  artifact: "rug-rugs"
+  version: "0.29.0"
+  origin:
+    repo: "https://github.com/atomist/rug-rugs.git"
+    branch: "0f425945c62957ccc2ccb63e9980e6f78b97a4a1"
+    sha: "0f42594"
+
+---
+kind: "operation"
+client: "rug-cli 1.0.0-m.2"
+editor:
+  name: "UpdateSupportFiles"
+  group: "atomist"
+  artifact: "rug-rugs"
+  version: "0.30.1"
+  origin:
+    repo: "https://github.com/atomist/rug-rugs.git"
+    branch: "4babf5df7ea909f42b0390b5c38fb8d3632b810d"
+    sha: "4babf5d"
+
