@@ -12,7 +12,7 @@ env:
   - MAVEN_USER=noone
   - MAVEN_TOKEN=notatoken
   - secure: p7CAxkVHbQJDUjjglAswo1iWwTIa/a7ns2xCiI6g//pbnN71J8jSvneHI4QkHaaF9YuSZT5/sb6Nq+ba/MfJ3C5lPY3UeWjHGIxJUIGkYizrnV+v1UmTujoWiHtTx8pR1lxjs+/Jc480ORin1fnjIPxfqNL0TeMB0yMW5m0tMBUKKsYvmqyREgjVwZWYoPDIyAmG3kUCClNeM9YxTlhb3epQ7uivpzWxbL577rbnoFoRjsWKhxkhK1J+D2Xf4RfJ35JlhxAYaa9GYeFTWPpKICU7W0absOFEgAI49f+B6HUTWNSrHOrzU2RNnN3+VIoRxLv77awBYcYFyisWHyIliFA37eh/95avzLSC39dfUlxAntPtzxY1lg4Fwy41iPJBoApLvDHt1oVnyiIAuGCjwOBBU1faCPfrjGON8fh7i7kAA6nKSMa3pgtBrhXiGjjPVk2wgedtMmYShpCOv5VmDSBcCBIbrGCB++5WJ0rnqQMdBtFZjzGC/g83M/V5VxHqSl8tEHdHy9F3aYCXagXXKO/Hjx0k+DXsyPn0kUcVn9bxNmMbmdWQppkFDVdm8w2F7Oq3VL8wC2V6ZVww8EHlsQmGQVlgiozwnn8f9ANRiWBvIzyCh16uUOL/2QIUo5STRe1tUx7G/IAZsK6Mwei4zLax2sTq77dN4T9041TCqqk=
-install: nvm install 6.9.2 && npm install -g yarn && yarn global add tslint typescript
+install: nvm install 8.0.0
 script: bash .atomist/build/travis-build.bash
 notifications:
   email: false
@@ -27,7 +27,7 @@ notifications:
 cache:
   directories:
   - "$HOME/.atomist"
-  - "$HOME/.cache/yarn"
+  - node_modules
 deploy:
   provider: releases
   api_key:

@@ -38,3 +38,17 @@ editor:
     branch: "master"
     sha: "14ad8cc*"
 
+---
+kind: "operation"
+client: "com.atomist:rug"
+version: "1.0.0-m.4"
+editor:
+  name: "UpdateSupportFiles"
+  group: "atomist"
+  artifact: "rug-rugs"
+  version: "0.31.0"
+  origin:
+    repo: "git@github.com:atomist/doc-rugs.git"
+    branch: "master"
+    sha: "b0404ca"
+
