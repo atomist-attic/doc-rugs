@@ -121,12 +121,7 @@ function main () {
     msg "archive version: $project_version"
 
     if [[ $TRAVIS_BRANCH == master || $TRAVIS_TAG =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
-        msg "publishing archive to $TEAM_ID"
-        if ! $rug publish -a "$project_version"; then
-            err "failed to publish archive $project_version"
-            git diff
-            return 1
-        fi
+        msg "not publishing this Rug archive"
 
         if ! git config --global user.email "travis-ci@atomist.com"; then
             err "failed to set git user email"
