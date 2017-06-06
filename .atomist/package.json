@@ -1,4 +1,22 @@
 {
+  "name": "@atomist/doc-rugs",
+  "description": "Atomist Rugs used in the end-user documentation",
+  "version": "0.2.0",
+  "author": "Atomist",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atomist/doc-rugs.git"
+  },
+  "keywords": [
+    "atomist",
+    "documentation",
+    "rug"
+  ],
+  "homepage": "https://github.com/atomist/doc-rugs#readme",
+  "bugs": {
+    "url": "https://github.com/atomist/doc-rugs/issues"
+  },
   "dependencies": {
     "@atomist/rugs": "^1.0.0-m.5",
     "mustache": "^2.3.0"
@@ -14,11 +32,18 @@
     "typescript": "2.3.2"
   },
   "directories": {
-    "test": "mocha/"
+    "test": "mocha"
   },
   "scripts": {
+    "autotest": "supervisor -q -n exit -e ts -x npm -- run mocha",
     "lint": "tslint '**/*.ts' --exclude 'node_modules/**' -t verbose",
     "mocha": "mocha --compilers ts:espower-typescript/guess 'mocha/**/*.ts'",
-    "test": "yarn run mocha && rug test"
+    "test": "npm run mocha && rug test"
+  },
+  "atomist": {
+    "requires": "[1.0.0-m.4,2.0.0)",
+    "extensions": {
+      "com.atomist.rug:rug-function-http": "[0.7.2,1.0.0)"
+    }
   }
 }
