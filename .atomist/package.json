@@ -1,7 +1,7 @@
 {
   "name": "@atomist/doc-rugs",
   "description": "Atomist Rugs used in the end-user documentation",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "Atomist",
   "license": "Apache-2.0",
   "repository": {
