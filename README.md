@@ -1,7 +1,6 @@
 # Atomist 'doc-rugs'
 
 [![Build Status](https://travis-ci.org/atomist/doc-rugs.svg?branch=master)](https://travis-ci.org/atomist/doc-rugs)
-[![Slack Status](https://join.atomist.com/badge.svg)](https://join.atomist.com)
 
 [rug]: http://docs.atomist.com/
 
